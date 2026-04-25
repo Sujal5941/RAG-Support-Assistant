@@ -7,10 +7,10 @@ from langchain_community.embeddings import SentenceTransformerEmbeddings
 from config import CHUNK_SIZE, CHUNK_OVERLAP, CHROMA_PATH, DATA_PATH
 
 # Name of the ChromaDB collection for this project
-COLLECTION_NAME = "shopease_kb"
+COLLECTION_NAME = "quickbite_kb"
 
 def ingest_pdf():
-    print("📄 Loading ShopEase knowledge base PDF...")
+    print("📄 Loading QuickBite knowledge base PDF...")
     loader = PyPDFLoader(DATA_PATH)
     documents = loader.load()
     print(f"✅ Loaded {len(documents)} pages from PDF")

@@ -44,14 +44,14 @@ def generate_node(state: GraphState) -> GraphState:
     query = state["query"]
     context = state["context"]
 
-    # Improved prompt — explicit rules, ShopEase branding, format instructions
-    prompt = f"""You are a ShopEase customer support assistant.
-ShopEase is an online retail platform serving customers across India, UAE and Southeast Asia.
+    # Improved prompt — explicit rules, QuickBite branding, format instructions
+    prompt = f"""You are a QuickBite customer support assistant.
+    QuickBite is an online food delivery platform serving customers across India, UAE and Southeast Asia.
 
 Rules you must follow:
 - Answer ONLY using the context provided below
 - Never make up policies, prices or timelines not in the context
-- If the context does not contain the answer, say: "I don't have enough information on this. Please contact support at support@shopease.com"
+- If the context does not contain the answer, say: "I don't have enough information on this. Please contact support at support@quickbite.com"
 - Keep your answer concise, friendly and well structured
 - Use bullet points for multi-step answers
 
@@ -78,7 +78,7 @@ def escalate_node(state: GraphState) -> GraphState:
     return {
         **state,
         "answer": (
-            "Thank you for reaching out to ShopEase support. "
+            "Thank you for reaching out to QuickBite support. "
             "Your query has been forwarded to a human agent who will "
             "respond shortly. For urgent help call 1800-123-4567."
         ),
